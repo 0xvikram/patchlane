@@ -1,0 +1,25 @@
+[project]
+name = "patchlane"
+version = "0.1.0"
+description = "Patchlane takes your Dependabot backlog to zero: every PR ends merged, fixed, or dismissed, with proof."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "neatlogs[openai]",
+    "openai>=1.50",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.uv]
+package = false

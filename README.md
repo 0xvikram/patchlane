@@ -6,7 +6,7 @@ Built for [neatHack](https://neatlogs.com/hackathon), 10–12 October 2026.
 
 ## Status
 
-Planning files only. The code is being written during the hackathon.
+In progress. The project skeleton is in place; the agent itself is being written during the hackathon. See [`hackathon.md`](hackathon.md) for the build log.
 
 A practice build of this spec was done in a separate private repository before kickoff. None of that code is in this repository; `spec/001-open-items.md` records what that practice run taught us.
 
@@ -26,3 +26,14 @@ For each open Dependabot pull request in a repository, Patchlane:
 - [`spec/001-plan.md`](spec/001-plan.md): the implementation plan
 - [`spec/001-api-contract.md`](spec/001-api-contract.md): the HTTP contract
 - [`spec/001-open-items.md`](spec/001-open-items.md): decisions, findings and open questions
+
+## Run it
+
+```bash
+uv sync
+cp .env.example .env        # then fill in the keys
+uv run pytest
+uv run python -m scripts.smoke_llm   # one traced model call
+```
+
+Set the model ids in `config.toml` before running the smoke script.
