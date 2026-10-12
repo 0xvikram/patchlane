@@ -1,8 +1,8 @@
 # Model ids are the provider's own names. Fill these in once the provider is chosen.
 [llm.models]
-orchestrator = ""
-coder = ""
-light = ""
+orchestrator = "gemini-2.5-flash"
+coder = "gemini-2.5-flash"
+light = "gemini-2.5-flash"
 
 [llm]
 timeout_seconds = 60

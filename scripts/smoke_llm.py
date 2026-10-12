@@ -19,7 +19,7 @@ async def main() -> int:
         result = await provider.chat(
             "light",
             [{"role": "user", "content": "Reply with exactly: patchlane online"}],
-            max_tokens=20,
+            max_tokens=512,
         )
     except LLMNotConfigured as exc:
         print(f"Not configured: {exc}")
